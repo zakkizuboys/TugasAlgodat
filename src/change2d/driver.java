@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tugasalgodat;
+package change2d;
 
 /**
  *
  * @author zakkizuboys
  */
-public class TugasAlgodat {
-
-    /**
-     * @param args the command line arguments
-     */
+public class driver {
     public static void main(String[] args) {
-        System.out.println("hello");
+        int c[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        ChangeLength2d cl = new ChangeLength2d();
+        cl.ch2D(c, 5, 2);
+        
     }
-    
 }
