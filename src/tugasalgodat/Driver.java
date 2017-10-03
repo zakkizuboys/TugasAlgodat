@@ -42,7 +42,9 @@ public class Driver {
         System.out.println("1. add");
         System.out.println("2. setsize");
         System.out.println("3. trim");
-        System.out.println("3. clear");
+        System.out.println("4. clear");
+        System.out.println("5. remove range");
+        System.out.println("6. clone");
         System.out.print("masukkan pilihan anda : ");
 
         a = sc.nextInt();
@@ -70,6 +72,15 @@ public class Driver {
                 System.out.println(numbers[4]);
                 System.out.println(numbers[5]);
                 System.out.println(numbers[6]);
+                break;
+            case 5:
+                al.removeRange(numbers, 2, 4);
+                for (int i = 0; i < numbers.length; i++) {
+                    System.out.println(numbers[i]);
+                }
+                break;
+            case 6:
+                al.clone(nm);
                 break;
         }
     }

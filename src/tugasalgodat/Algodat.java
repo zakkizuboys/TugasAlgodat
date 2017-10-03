@@ -77,14 +77,46 @@ public class Algodat extends ArrayLinearList {
                 }
 
             } else {
-                n = new int[h.length];
-                System.arraycopy(h, 0, n, 0, h.length);
-                for (int i = 0; i < h.length; i++) {
-                    System.out.println(h[i]);
+                ArrayLinearList all = new ArrayLinearList(element);
+                for (int i = 0; i < element.length; i++) {
+                    System.out.println(n[i]);
                 }
             }
         } catch (java.lang.ArrayIndexOutOfBoundsException b) {
             System.out.println("array kosong");
+        }
+    }
+
+    public Object remove(Object[] a, int index) {
+        Object re = a[index];
+        int d = a.length;
+        for (int i = index; i < d; i++) {
+            a[i - 1] = a[i];
+            //a[--d] = null;
+        }
+        a[--d] = null;
+        return re;
+    }
+
+    public Object removeRange(Object[] a, int index, int index2) {
+        Object remove = a[index];
+        int d = a.length;
+        if (index < index2) {
+            for (int i = index; i <= index2; i++) {
+//               a[i-1] = a[i];
+//               a[--d]=null;
+                remove(a, index);
+            }
+        }
+        return remove;
+    }
+
+    public void clone(int[] a) {
+        n = new int[a.length];
+        System.arraycopy(a, 0, n, 0, a.length);
+
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(n[i]);
         }
     }
 
